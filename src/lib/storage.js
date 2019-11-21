@@ -30,10 +30,7 @@ export function load() {
 export function save(type, mediaUrl, text, title) {
   let saved = JSON.parse(window.localStorage.getItem(LOCALSTORAGE_KEY)) || [];
   const object = {
-    'type': type,
-    'mediaUrl': mediaUrl,
-    'text': text,
-    'title': title
+    type, mediaUrl, text, title,
   };
   if (saved === null) {
     saved = { object };

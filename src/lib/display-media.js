@@ -1,7 +1,7 @@
 // todo vísa í rétta hluti með import
 import getRandomImage from './nasa-api';
 import { empty, el } from './helpers';
-import { save, load, clear } from './storage';
+import { save, load } from './storage';
 
 // breytur til þess að halda utan um html element nodes
 let title; // titill fyrir mynd á forsíðu
