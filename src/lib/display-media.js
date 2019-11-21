@@ -27,13 +27,18 @@ function getNewImage() {
     text.appendChild(document.createTextNode(image.explanation));
     if (image.media_type === 'video') {
       const video = el('iframe');
+      video.classList.add('apod__image');
       video.setAttribute('height', 'auto');
       video.setAttribute('width', 'auto');
       video.src = image.url;
       container.insertBefore(video, img);
       container.removeChild(img);
     } else {
-      img.src = image.url;
+      const mynd = el('img');
+      mynd.classList.add('apod__image');
+      mynd.src = image.url;
+      container.insertBefore(mynd, img);
+      container.removeChild(img);
     }
   }).catch((err) => {
     // eslint-disable-next-line no-console
